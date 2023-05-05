@@ -9,7 +9,7 @@ if [ $# -eq 0 ]; then
 fi
 
 # The raw representation of the launch parameters
-RAW=$(echo $*)
+RAW="$*"
 # Cut the letter from the beginning to see if is absolute or relative
 LETTER=$(echo $RAW | cut -d ':' -f 1 -s | tr '[:upper:]' '[:lower:]')
 # Replace back slashes with forward slashes
