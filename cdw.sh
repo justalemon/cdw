@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]; then
+    echo "cdw"
+    echo
+    echo "Changes current working directory to a Windows path"
+    echo
+    echo "Usage: cdw [path]"
+fi
+
 # The raw representation of the launch parameters
 RAW=$(echo $*)
 # Cut the letter from the beginning to see if is absolute or relative
