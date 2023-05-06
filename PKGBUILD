@@ -8,5 +8,10 @@ license=("MIT")
 depends=("bash")
 
 package() {
-    install -m 775 -DT "$startdir/$pkgname.sh" "$pkgdir/usr/bin/$pkgname"
+    install -m 644 -DT "$startdir/$pkgname.sh" "$pkgdir/etc/profile.d/$pkgname.sh"
+}
+
+post_install() {
+    source "$pkgdir/etc/profile.d/$pkgname.sh"
+    echo -e "\033[1;33mWarning! \033[1;37mcdw will only work on posix compliant terminals"
 }
