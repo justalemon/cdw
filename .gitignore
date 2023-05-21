@@ -1,4 +1,5 @@
 # Arch Linux pacman
+src-*/
 pkg/
 src/
 *.pkg.tar.zst
