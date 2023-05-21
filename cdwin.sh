@@ -1,11 +1,11 @@
-function cdw()
+function cdwin()
 {
     if [ $# -eq 0 ]; then
-        echo "cdw"
+        echo "cdwin"
         echo
         echo "Changes current working directory to a Windows path"
         echo
-        echo "Usage: cdw [path]"
+        echo "Usage: cdwin [path]"
     fi
 
     # The raw representation of the launch parameters
