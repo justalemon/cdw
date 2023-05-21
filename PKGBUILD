@@ -12,6 +12,7 @@ package() {
 }
 
 post_install() {
+    # shellcheck source=cdwin.sh
     source "$pkgdir/etc/profile.d/$pkgname.sh"
     echo -e "\033[1;33mWarning! \033[1;37mcdwin will only work on posix compliant terminals"
 }
