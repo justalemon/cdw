@@ -1,13 +1,23 @@
 pkgname=cdwin
-pkgver=0.0.1
+pkgver=r12.688cd99
 pkgrel=1
 pkgdesc="CD to a Windows-formatted path in any WSL terminal"
 arch=("any")
 url="https://github.com/justalemon/cdwin"
 license=("MIT")
 depends=("bash")
+makedepends=()
+provides=("${pkgname%-git}")
+source=("src-$pkgname::git+${url}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+    cd "src-$pkgname"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+}
 
 package() {
+    cd "src-$pkgname"
     install -m 644 -DT "$startdir/$pkgname.sh" "$pkgdir/etc/profile.d/$pkgname.sh"
 }
 
