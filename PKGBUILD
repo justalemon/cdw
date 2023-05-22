@@ -1,5 +1,5 @@
 pkgname=cdwin
-pkgver=r12.688cd99
+pkgver=r17.ab8e7d3
 pkgrel=1
 pkgdesc="CD to a Windows-formatted path in any WSL terminal"
 arch=("any")
