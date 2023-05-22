@@ -1,4 +1,4 @@
-name: Compile Package
+name: Compile Packages
 on:
   release:
     types:
@@ -12,7 +12,7 @@ permissions:
   pages: write
 
 jobs:
-  compile:
+  pacman:
     runs-on: ubuntu-22.04
     container: archlinux
     steps:
