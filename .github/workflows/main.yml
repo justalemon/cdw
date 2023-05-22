@@ -17,7 +17,7 @@ jobs:
     container: archlinux
     steps:
       - uses: actions/checkout@v3
-      - run: pacman -Syu --noconfirm base-devel
+      - run: pacman -Syu --noconfirm base-devel git
       - run: makepkg -sf
         env:
           EUID: "1"
