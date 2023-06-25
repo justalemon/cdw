@@ -23,5 +23,5 @@ jobs:
           EUID: "1"
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ github.event.repository.name }}
+          name: ${{ github.event.repository.name }}.Arch
           path: "*.pkg.tar.zst"
